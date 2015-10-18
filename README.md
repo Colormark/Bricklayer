@@ -10,11 +10,14 @@
   节点名为“sence” 或节点class含“bl-sence”会被自动初始化为 BLSenceView  
     
   例如：  
-` ``<sence bl-view-name="home" bl-view-title="My home page"></sence>  
-` ``
-或例如：  
-` ``<div class="bl-sence" bl-view-name="home" bl-view-title="My home page"></div>  
-` ``
+```html
+<sence bl-view-name="home" bl-view-title="My home page"></sence>  
+```
+或例如：<br>
+
+```html
+<div class="bl-sence" bl-view-name="home" bl-view-title="My home page"></div>  
+```
   
 ###属性
     属性名    | 是否必须    | 描述     |默认
@@ -30,8 +33,9 @@ bl-view-scrollable   | 否 |  是否使用滚动视图，“false”为不使用
   节点名为“section” 或节点class含“bl-section”会被自动初始化为 BLSectionView  
     
   例如：  
-` ``<section bl-view-name="my_profile" bl-view-title="My profile"></section>
-` ``
+```html
+<section bl-view-name="my_profile" bl-view-title="My profile"></section>
+```
 
 ###属性
     属性名    | 是否必须    | 描述     |默认
@@ -42,9 +46,9 @@ bl-view-defalutload  | 否 |  是否默认载入，“true”为显示 | 默认�
 bl-view-scrollable   | 否 |  是否使用滚动视图，“false”为不使用 | 默认使用
 
 ##3）.从服务端下载sence并应用
-` ``javascript
+```javascript
 $.BLLoadSenceFromRemote (url,senceName,senceTitle,callback);  
-` ``
+```
 
 #二、视图及控件（BLView)
 ------
@@ -63,13 +67,13 @@ $.BLLoadSenceFromRemote (url,senceName,senceTitle,callback);
   *bl-model-content			  	      	:Html content<br>
   *bl-model-btns                 		:JSON object string.
   e.g.
-` ``javascript
+```javascript
 {
 	'ok':'Login',
 	'cancal':'Cancel',
 	'customs':['Register','Forget password?']
 }
-` ``
+```
 
 ##2).TableView 
 ###Node：bl-tableview                     	:Tableview like viewcontroler.<br>
@@ -95,9 +99,11 @@ $.BLLoadSenceFromRemote (url,senceName,senceTitle,callback);
 >>>\<bl-tableview-loop\>
 >>>>\<bl-tableview-cellview-prototype\>
 >>>\<bl-tableview-loadmore(optional)\>
-<br>
+
+<h3></h3>
+
 >After render
->>\<bl-tableview>
+>>\<bl-tableview\>
 >>>\<bl-tableview-cellview-prototype(hidden)\>
 >>>\<bl-tableview-loop\>
 >>>>\<bl-tableview-cellview\>
@@ -127,23 +133,23 @@ $.BLLoadSenceFromRemote (url,senceName,senceTitle,callback);
   farmatDataFields     | 在获取到数据后，格式化数据
 
 <h3>样例</h3>  
-` ``javascript
+```javascript
  $.BLDetailviewDelegate("article.detail","farmatDataFields",function(data){
 	data["article_title"]="New:"+data["article_title"];
 	console.dir(data);
 	return data;
 });
-` ``
+```
 
 <h3>另外一种写法</h3> 
-` ``javascript
+```javascript
   $.BLDetailviewDelegate("article.detail",{
 	"farmatDataFields":function(data){
 		console.dir(data);
 		return data;
 	}
 });
-` ``
+```
 
 ##4).FormView
 *bl-form<br>
