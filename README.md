@@ -6,17 +6,15 @@
 ##1）.场景（BLSenceView）
   场景相当于独立的网页<br>
   
-  ###初始化
+###初始化
   节点名为“sence” 或节点class含“bl-sence”会被自动初始化为 BLSenceView  
     
   例如：  
-  ` ``<sence bl-view-name="home" bl-view-title="My home page">  
-  </sence>  
-  ` ``
-  或例如：   
-  ` ``<div class="bl-sence" bl-view-name="home" bl-view-title="My home page">   
-  </div>  
-  ` ``
+` ``<sence bl-view-name="home" bl-view-title="My home page"></sence>  
+` ``
+或例如：  
+` ``<div class="bl-sence" bl-view-name="home" bl-view-title="My home page"></div>  
+` ``
   
 ###属性
     属性名    | 是否必须    | 描述     |默认
@@ -28,13 +26,12 @@ bl-view-scrollable   | 否 |  是否使用滚动视图，“false”为不使用
 
 ##2）.章节（BLSectionView）
   场景相当于网页中的一部分
-  ###初始化
+###初始化
   节点名为“section” 或节点class含“bl-section”会被自动初始化为 BLSectionView  
     
   例如：  
-  ` ``<section bl-view-name="my_profile" bl-view-title="My profile"> 
-  </section>
-  ` ``
+` ``<section bl-view-name="my_profile" bl-view-title="My profile"></section>
+` ``
 
 ###属性
     属性名    | 是否必须    | 描述     |默认
@@ -45,9 +42,9 @@ bl-view-defalutload  | 否 |  是否默认载入，“true”为显示 | 默认�
 bl-view-scrollable   | 否 |  是否使用滚动视图，“false”为不使用 | 默认使用
 
 ##3）.从服务端下载sence并应用
-  ` ``javascript  
-  $.BLLoadSenceFromRemote (url,senceName,senceTitle,callback);  
-  ` ``
+` ``javascript
+$.BLLoadSenceFromRemote (url,senceName,senceTitle,callback);  
+` ``
 
 #二、视图及控件（BLView)
 ------
@@ -57,26 +54,25 @@ bl-view-scrollable   | 否 |  是否使用滚动视图，“false”为不使用
   *bl-model-confirm<br>
   *bl-model-hue<br>
   
-  ` ``
-  <model-alert bl-view-name="唯一识别名" bl-view-title="类似head.title">  
-  </model-alert>
-  ` ``
+` ``
+<model-alert bl-view-name="唯一识别名" bl-view-title="类似head.title"></model-alert>
+` ``
   
   属性:<br>
   *bl-model-title                		:Title text(Also can use HTML)<br>
   *bl-model-content			  	      	:Html content<br>
   *bl-model-btns                 		:JSON object string.
   e.g.
-  ` ``javascript
-  {
- 		'ok':'Login',
- 		'cancal':'Cancel',
- 		'customs':['Register','Forget password?']
- 	}
- 	` ``
+` ``javascript
+{
+	'ok':'Login',
+	'cancal':'Cancel',
+	'customs':['Register','Forget password?']
+}
+` ``
 
 ##2).TableView 
-*Node：bl-tableview                     	:Tableview like viewcontroler.<br>
+###Node：bl-tableview                     	:Tableview like viewcontroler.<br>
   ==>Attributes:<br>
   *bl-tableview-datasource        		:Api name.<br>
   *bl-tableview-delegate      		:tableview 和 tablecellview 的事件管理. <br>
@@ -87,27 +83,27 @@ bl-view-scrollable   | 否 |  是否使用滚动视图，“false”为不使用
   *bl-tableview-autorefreshdata	  	:自动刷新数据<br>
  
  
-*Node：bl-tablecellview                 	:Item in tableview, Auto create from datasource. <br>
-*Node：bl-tablecellview-prototype       	:Prototype of tablecellview.<br>
+###Node：bl-tablecellview                 	:Item in tableview, Auto create from datasource. <br>
+###Node：bl-tablecellview-prototype       	:Prototype of tablecellview.<br>
   ==>Attributes:<br>
   bl-identifier                  		:You can set >1 prototypes with deffrent identifier and select prototype in delegate.<br>
 
-*Node：bl-tableview-loadmore            	:Auto create by tableview.<br>
-
-  >Before render
-  >><bl-tableview>
-  >>><bl-tableview-loop>
-  >>>><bl-tableview-cellview-prototype>
-  >>><bl-tableview-loadmore(optional)>
-  <br>
-  >After render
-  >><bl-tableview><br>
-  >>><bl-tableview-cellview-prototype(hidden)><br>
-  >>><bl-tableview-loop><br>
-  >>>><bl-tableview-cellview><br>
-  >>><bl-tableview-loadmore(auto create)><br>
+###Node：bl-tableview-loadmore            	:Auto create by tableview.<br>
+-----
+>Before render
+>>\<bl-tableview\>
+>>>\<bl-tableview-loop\>
+>>>>\<bl-tableview-cellview-prototype\>
+>>>\<bl-tableview-loadmore(optional)\>
+<br>
+>After render
+>>\<bl-tableview>
+>>>\<bl-tableview-cellview-prototype(hidden)\>
+>>>\<bl-tableview-loop\>
+>>>>\<bl-tableview-cellview\>
+>>>\<bl-tableview-loadmore(auto create)\>
   
-  <h2>代理方法Delegate method</h2>
+###代理方法Delegate method</h2>
   方法  | 描述
 ------------- | -------------
   config               | 配置
@@ -122,9 +118,9 @@ bl-view-scrollable   | 否 |  是否使用滚动视图，“false”为不使用
 ##3).DetailView
 *bl-detailview-datasource<br>
 *bl-detailview-delegate<br>
--Auto enable FieldView<br>
+-Auto enable FieldView
 
-<h2>代理方法Delegate method</h2>
+###代理方法Delegate method###
 方法  | 描述
 ------------- | -------------
   config               | 配置
