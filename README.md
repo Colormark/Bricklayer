@@ -3,39 +3,66 @@
 
 #一、布局View （LayoutView）
 ------
-##1）.场景
+##1）.场景（BLSenceView）
   场景相当于独立的网页<br>
-  <sence bl-view-name="唯一识别名" bl-view-title="类似head.title"><br>
-  </sence><br>
+  
+  ###初始化
+  节点名为“sence” 或节点class含“bl-sence”会被自动初始化为 BLSenceView  
+    
+  例如：  
+  ` ``<sence bl-view-name="home" bl-view-title="My home page">  
+  </sence>  
+  ` ``
+  或例如：   
+  ` ``<div class="bl-sence" bl-view-name="home" bl-view-title="My home page">   
+  </div>  
+  ` ``
+  
+###属性
+    属性名    | 是否必须    | 描述     |默认
+------------- | ------------- | ------------- | -------------
+bl-view-name | 是 | 唯一识别名 | 无
+bl-view-title | 是 | 标题 | 无
+bl-view-defalutload  | 否 |  是否默认载入，“true”为显示 | 默认显示第一个sence        	bl-view-showtabbar   | 否 |  是否显示tabbar（参考tabbar章节），“false”为不显示|默认显示     bl-view-fullscreen   | 否 |  是否全屏显示，“false”为不全屏 | 默认全屏
+bl-view-scrollable   | 否 |  是否使用滚动视图，“false”为不使用 | 默认使用
 
-  增强属性<br>
-  *bl-view-defalutload               	：是否默认载入，，“true”为显示，默认显示第一个sence<br>
-  *bl-view-showtabbar                  ：是否显示tabbar（参考tabbar章节），“false”为不显示，默认显示<br>
-  *bl-view-fullscreen                  ：是否全屏显示，“false”为不全屏，默认全屏<br>
+##2）.章节（BLSectionView）
+  场景相当于网页中的一部分
+  ###初始化
+  节点名为“section” 或节点class含“bl-section”会被自动初始化为 BLSectionView  
+    
+  例如：  
+  ` ``<section bl-view-name="my_profile" bl-view-title="My profile"> 
+  </section>
+  ` ``
 
-##2）.章节
-  场景相当于网页中的一部分<br><br>
-  <section bl-view-name="唯一识别名" bl-view-title="类似head.title"><br>
-  </section><br>
-
-  增强属性<br>
-  *bl-view-fullscreen                  ：是否全屏显示，“false”为不全屏，默认全屏<br>
-  *bl-view-scrollable                  ：是否使用滚动视图，“false”为不使用，默认使用<br>
+###属性
+    属性名    | 是否必须    | 描述     |默认
+------------- | ------------- | ------------- | -------------
+bl-view-name | 是 | 唯一识别名 | 无
+bl-view-title | 是 | 标题 | 无
+bl-view-defalutload  | 否 |  是否默认载入，“true”为显示 | 默认显示第一个sence        	bl-view-showtabbar   | 否 |  是否显示tabbar（参考tabbar章节），“false”为不显示|默认显示     bl-view-fullscreen   | 否 |  是否全屏显示，“false”为不全屏 | 默认全屏
+bl-view-scrollable   | 否 |  是否使用滚动视图，“false”为不使用 | 默认使用
 
 ##3）.从服务端下载sence并应用
-  $.BLLoadSenceFromRemote (url,senceName,senceTitle,callback);<br>
+  ` ``javascript  
+  $.BLLoadSenceFromRemote (url,senceName,senceTitle,callback);  
+  ` ``
 
-#二、视图（BLView,BL*View)
+#二、视图及控件（BLView)
 ------
 ##1).模态View (ModelView)
   *bl-model-alert<br>
   *bl-model-promet<br><br>
   *bl-model-confirm<br>
   *bl-model-hue<br>
-  <model-alert bl-view-name="唯一识别名" bl-view-title="类似head.title"><br>
-  </model-alert><br>
   
-  增强属性:<br><br>
+  ` ``
+  <model-alert bl-view-name="唯一识别名" bl-view-title="类似head.title">  
+  </model-alert>
+  ` ``
+  
+  属性:<br>
   *bl-model-title                		:Title text(Also can use HTML)<br>
   *bl-model-content			  	      	:Html content<br>
   *bl-model-btns                 		:JSON object string.
