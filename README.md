@@ -19,11 +19,14 @@
 
   增强属性<br>
   *bl-view-fullscreen                  ：是否全屏显示，“false”为不全屏，默认全屏<br>
+  *bl-view-scrollable                  ：是否使用滚动视图，“false”为不使用，默认使用<br>
 
 ##3）.从服务端下载sence并应用
   $.BLLoadSenceFromRemote (url,senceName,senceTitle,callback);<br>
 
-#二、模态View (ModelView)
+#二、视图BLView
+
+##1).模态View (ModelView)
   *-bl-model-alert<br>
   *-bl-model-promet<br><br>
   *-bl-model-confirm<br>
@@ -41,11 +44,11 @@
  														'customs':['Register','Forget password?']<br>
  													}<br>
 
-#三、TableView 
+##2).TableView 
 *Node：bl-tableview                     	:Tableview like viewcontroler.<br>
   ==>Attributes:<br>
   *bl-tableview-datasource        		:Api name.<br>
-  *bl-tableview-datadelegate      		:tableview 和 tablecellview 的事件管理. <br>
+  *bl-tableview-delegate      		:tableview 和 tablecellview 的事件管理. <br>
   *bl-tableview-localstore        		:是否缓存数据到本地数据库，默认false<br>
  <br>
   *bl-tableview-pagelength        		:List array length. Start with 1.<br>
@@ -56,7 +59,7 @@
 *Node：bl-tablecellview                 	:Item in tableview, Auto create from datasource. <br>
 *Node：bl-tablecellview-prototype       	:Prototype of tablecellview.<br>
   ==>Attributes:<br>
-  bl-identifier                  		:You can set >1 prototypes with deffrent identifier and select prototype in datadelegate.<br>
+  bl-identifier                  		:You can set >1 prototypes with deffrent identifier and select prototype in delegate.<br>
 
 *Node：bl-tableview-loadmore            	:Auto create by tableview.<br>
 
@@ -71,13 +74,26 @@
   ` ``>>><bl-tableview-loop><br>
   ` ``>>>><bl-tableview-cellview><br>
   ` ``>>><bl-tableview-loadmore(auto create)><br>
+  
+  <h2>代理方法Delegate method</h2>
+  config               | 配置
+  setQueryPrams        | 在API请求前，设置请求参数
+  farmatDataFields     | 在获取到数据后，格式化数据
+  cellOnTap            | 当点击一个cellview
+  cellOnHold           | 当长按一个cellview
+  cellOnSwipeLeft      | 当向左划一个cellview
+  cellOnSwipeRight     | 当向右划一个cellview
 
-#四、DetailView
+##3).DetailView
 *bl-detailview-datasource<br>
-*bl-detailview-datadelegate<br>
+*bl-detailview-delegate<br>
 -Auto enable FieldView<br>
 
-#五、FormView
+<h2>代理方法Delegate method</h2>
+  config               | 配置
+  farmatDataFields     | 在获取到数据后，格式化数据
+
+##4).FormView
 *bl-form<br>
 *bl-form-datasource<br>
 *bl-form-submit-success					           :Call faAlert"{'title':'','desc':''}"<br>
@@ -86,13 +102,18 @@
 *bl-form-field-validate 				           :form字段验证，支持：email、phone、password、password-repeat<br>
 *bl-form-field-validate-regexp 			       :正则验证<br>
 *bl-form-submit                            :submit button<br>
-*bl-form-datadelegate<br>
+*bl-form-delegate<br>
 
-#六、FilterView
+<h2>代理方法Delegate method</h2>
+  config               | 配置
+  setQueryPrams        | 在API请求前，设置请求参数
+  afterSubmit          | 请求完成，获取返回数据
+
+##5).FilterView
 *bl-filterview<br>
 *bl-filterview<br>
 
-#七、FieldView
+##6).FieldView
 *bl-field="fieldname"											                      	:Fill with text<br>
 *%{bl-field:'fieldname'}%										                    	:Replace with (暂时停用)<br>
 *bl-field-attr="{'attr_name':'attrname','attr_field':'fieldname'}"	    	:Attributes<br>
@@ -100,13 +121,13 @@
   
 *bl-field-htmldecode             :True or NULL. Decode html<br>
 
-#八、ScrollView 												  :Classname:"bl-scrollview" or Nodename:"scrollview"<br>
+##7).ScrollView 												  :Classname:"bl-scrollview" or Nodename:"scrollview"<br>
 *bl-scrollview														:Scroll View<br>
   ==>Attributes:<br>
   *bl-scrollview-showscrollbar										:True or false<br>
   *bl-scrollview-enable-blance										:True or false<br>
 
-#九、ImageView(Image Responsive)
+##8).ImageView(Image Responsive)
 *bl-imageview 														:Classname:"bl-imageview" or Nodename:"imageview"<br>
 -Set url filter in BLConfig<br>
   ==>Attributes:<br>
@@ -114,18 +135,17 @@
   *bl-imageview-fix-height											:True or false<br>
   *bl-imageview-tapshowbig											:True or false<br>
 
-#十、View
--All view based on BLView<br>
+##9).base View 通用
 *bl-view-radius 						:True or false<br>
 *bl-view-circle 						:px or percent<br>
 *bl-view-shadow 						:"small|normal|big color" <br>
 *bl-view-3dshadow 					:"color"<br><br>
 
-bl-show-sence                  		:Show target sence when cellview taped.<br>
- bl-show-section                		:Show target section when cellview taped.<br>
+*bl-show-sence                  		:Show target sence when cellview taped.<br>
+*bl-show-section                		:Show target section when cellview taped.<br>
  
  
-#十一、动画 Animations
+#三、动画 Animations
 -Fix Any View
   Attributes:<br>
   *bl-animate-effect 					:Animate name. <br>
