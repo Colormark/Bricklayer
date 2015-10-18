@@ -58,9 +58,9 @@ $.BLLoadSenceFromRemote (url,senceName,senceTitle,callback);
   *bl-model-confirm<br>
   *bl-model-hue<br>
   
-` ``
+```html
 <model-alert bl-view-name="唯一识别名" bl-view-title="类似head.title"></model-alert>
-` ``
+```
   
   属性:<br>
   *bl-model-title                		:Title text(Also can use HTML)<br>
@@ -75,39 +75,45 @@ $.BLLoadSenceFromRemote (url,senceName,senceTitle,callback);
 }
 ```
 
-##2).TableView 
-###Node：bl-tableview                     	:Tableview like viewcontroler.<br>
-  ==>Attributes:<br>
-  *bl-tableview-datasource        		:Api name.<br>
-  *bl-tableview-delegate      		:tableview 和 tablecellview 的事件管理. <br>
-  *bl-tableview-localstore        		:是否缓存数据到本地数据库，默认false<br>
- <br>
-  *bl-tableview-pagelength        		:List array length. Start with 1.<br>
-  *bl-tableview-startpage				    :List array begin index.<br>
-  *bl-tableview-autorefreshdata	  	:自动刷新数据<br>
+##2).表视图（BLTableView）
+###bl-tableview
+列表型数据视图，主节点
+####初始化
+  节点名为“bltableview” 或节点class含“bl-tableview”会被自动初始化为 BLTableView
+####属性
+    属性名    | 是否必须    | 描述     |默认
+------------- | ------------- | ------------- | -------------
+bl-tableview-datasource | 否 |Api name | 无
+bl-tableview-delegate   | 否 |tableview 和 tablecellview 的事件管理 | 无
+bl-tableview-localstore | 否 |是否缓存数据到本地数据库 |false
+bl-tableview-pagelength | 否 |每页显示数量  | 10
+bl-tableview-startpage  | 否 |起始页页码 | 1
+bl-tableview-autorefreshdata | 否 | 自动刷新数据，值为秒 | 否（0）
  
  
-###Node：bl-tablecellview                 	:Item in tableview, Auto create from datasource. <br>
-###Node：bl-tablecellview-prototype       	:Prototype of tablecellview.<br>
+###Node：bl-tablecellview                 	
+:Item in tableview, Auto create from datasource. <br>
+###Node：bl-tablecellview-prototype       	
+:Prototype of tablecellview.<br>
   ==>Attributes:<br>
   bl-identifier                  		:You can set >1 prototypes with deffrent identifier and select prototype in delegate.<br>
 
-###Node：bl-tableview-loadmore            	:Auto create by tableview.<br>
------
->Before render
->>\<bl-tableview\>
->>>\<bl-tableview-loop\>
->>>>\<bl-tableview-cellview-prototype\>
->>>\<bl-tableview-loadmore(optional)\>
+###Node：bl-tableview-loadmore
+:Auto create by tableview.<br>
 
-<h3></h3>
+###Prototype 如何工作
+<h3>Before render</h3>
+>\<bl-tableview\>
+>>\<bl-tableview-loop\>
+>>>\<bl-tableview-cellview-prototype\>
+>>\<bl-tableview-loadmore(optional)\>
 
->After render
->>\<bl-tableview\>
->>>\<bl-tableview-cellview-prototype(hidden)\>
->>>\<bl-tableview-loop\>
->>>>\<bl-tableview-cellview\>
->>>\<bl-tableview-loadmore(auto create)\>
+<h3>After render</h3>
+>\<bl-tableview\>
+>>\<bl-tableview-cellview-prototype(hidden)\>
+>>\<bl-tableview-loop\>
+>>>\<bl-tableview-cellview\>
+>>\<bl-tableview-loadmore(auto create)\>
   
 ###代理方法Delegate method</h2>
   方法  | 描述
@@ -151,9 +157,13 @@ $.BLLoadSenceFromRemote (url,senceName,senceTitle,callback);
 });
 ```
 
-##4).FormView
-*bl-form<br>
-*bl-form-datasource<br>
+##4).表单BLFormView
+  自动表单处理及提交
+###初始化
+  节点名为“blform” 或节点class含“bl-form”会被自动初始化为 BLFormView 
+
+###属性
+*bl-form-datasource
 *bl-form-submit-success					           :Call faAlert"{'title':'','desc':''}"<br>
 *bl-form-submit-success-func   			       :Call function<br>
 *bl-form-field                             :field name for submit<br>
@@ -162,7 +172,7 @@ $.BLLoadSenceFromRemote (url,senceName,senceTitle,callback);
 *bl-form-submit                            :submit button<br>
 *bl-form-delegate<br>
 
-<h2>代理方法Delegate method</h2>
+###代理方法Delegate method
 方法  | 描述
 ------------- | -------------
   config               | 配置
