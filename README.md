@@ -2,6 +2,7 @@
 
 
 #一、布局View （LayoutView）
+------
 ##1）.场景
   场景相当于独立的网页<br>
   <sence bl-view-name="唯一识别名" bl-view-title="类似head.title"><br>
@@ -24,25 +25,28 @@
 ##3）.从服务端下载sence并应用
   $.BLLoadSenceFromRemote (url,senceName,senceTitle,callback);<br>
 
-#二、视图BLView
-
+#二、视图（BLView,BL*View)
+------
 ##1).模态View (ModelView)
-  *-bl-model-alert<br>
-  *-bl-model-promet<br><br>
-  *-bl-model-confirm<br>
-  *-bl-model-hue<br>
+  *bl-model-alert<br>
+  *bl-model-promet<br><br>
+  *bl-model-confirm<br>
+  *bl-model-hue<br>
   <model-alert bl-view-name="唯一识别名" bl-view-title="类似head.title"><br>
   </model-alert><br>
   
   增强属性:<br><br>
   *bl-model-title                		:Title text(Also can use HTML)<br>
   *bl-model-content			  	      	:Html content<br>
-  *bl-model-btns                 		:JSON object string. e.g.<br>
-  	{<br><br>
- 														'ok':'Login',<br>
- 														'cancal':'Cancel',<br>
- 														'customs':['Register','Forget password?']<br>
- 													}<br>
+  *bl-model-btns                 		:JSON object string.
+  e.g.
+  ` ``javascript
+  {
+ 		'ok':'Login',
+ 		'cancal':'Cancel',
+ 		'customs':['Register','Forget password?']
+ 	}
+ 	` ``
 
 ##2).TableView 
 *Node：bl-tableview                     	:Tableview like viewcontroler.<br>
@@ -63,19 +67,22 @@
 
 *Node：bl-tableview-loadmore            	:Auto create by tableview.<br>
 
-  >Before render<br>
-  ` ``>><bl-tableview><br>
-  ` ``>>><bl-tableview-loop><br>
-  ` ``>>>><bl-tableview-cellview-prototype><br>
-  ` ``>>><bl-tableview-loadmore(optional)><br>
-  >After render<br>
-  ` ``>><bl-tableview><br>
-  ` ``>>><bl-tableview-cellview-prototype(hidden)><br>
-  ` ``>>><bl-tableview-loop><br>
-  ` ``>>>><bl-tableview-cellview><br>
-  ` ``>>><bl-tableview-loadmore(auto create)><br>
+  >Before render
+  >><bl-tableview>
+  >>><bl-tableview-loop>
+  >>>><bl-tableview-cellview-prototype>
+  >>><bl-tableview-loadmore(optional)>
+  <br>
+  >After render
+  >><bl-tableview><br>
+  >>><bl-tableview-cellview-prototype(hidden)><br>
+  >>><bl-tableview-loop><br>
+  >>>><bl-tableview-cellview><br>
+  >>><bl-tableview-loadmore(auto create)><br>
   
   <h2>代理方法Delegate method</h2>
+  方法  | 描述
+------------- | -------------
   config               | 配置
   setQueryPrams        | 在API请求前，设置请求参数
   farmatDataFields     | 在获取到数据后，格式化数据
@@ -84,14 +91,36 @@
   cellOnSwipeLeft      | 当向左划一个cellview
   cellOnSwipeRight     | 当向右划一个cellview
 
+
 ##3).DetailView
 *bl-detailview-datasource<br>
 *bl-detailview-delegate<br>
 -Auto enable FieldView<br>
 
 <h2>代理方法Delegate method</h2>
+方法  | 描述
+------------- | -------------
   config               | 配置
   farmatDataFields     | 在获取到数据后，格式化数据
+
+<h3>样例</h3>  
+` ``javascript
+ $.BLDetailviewDelegate("article.detail","farmatDataFields",function(data){
+	data["article_title"]="New:"+data["article_title"];
+	console.dir(data);
+	return data;
+});
+` ``
+
+<h3>另外一种写法</h3> 
+` ``javascript
+  $.BLDetailviewDelegate("article.detail",{
+	"farmatDataFields":function(data){
+		console.dir(data);
+		return data;
+	}
+});
+` ``
 
 ##4).FormView
 *bl-form<br>
@@ -105,6 +134,8 @@
 *bl-form-delegate<br>
 
 <h2>代理方法Delegate method</h2>
+方法  | 描述
+------------- | -------------
   config               | 配置
   setQueryPrams        | 在API请求前，设置请求参数
   afterSubmit          | 请求完成，获取返回数据
@@ -145,7 +176,8 @@
 *bl-show-section                		:Show target section when cellview taped.<br>
  
  
-#三、动画 Animations
+#三、动画 (Animations)
+------
 -Fix Any View
   Attributes:<br>
   *bl-animate-effect 					:Animate name. <br>
@@ -154,8 +186,8 @@
   *bl-animate-delayinterval			:A animate on list item begin time since the pre item animate started.<br>
   *bl-animate-duration                 :"slow , normal(default) , fast , zing"<br>
   
-  -----------Animate effect name-------------
-  ------
+  Animate effect name
+  
 ###Attention seekers<br><br>
   flash bounce shake tada swing wobble wiggle pulse
 
