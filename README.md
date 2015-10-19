@@ -29,10 +29,11 @@ bl-view-defalutload  | 否 |  是否默认载入，“true”为显示 | 默认�
 bl-view-scrollable   | 否 |  是否使用滚动视图，“false”为不使用 | 默认使用
 
 * <h3>方法</h3>
-	* <h4>从服务端下载sence并应用</h4>  
+* * <h4>从服务端下载sence并应用</h4>  
 ```javascript
 $.BLLoadSenceFromRemote (url,senceName,senceTitle,callback); 
 ```
+
 	* <h4>显示一个sence</h4>  
 ```javascript
 $.BLShowSence (senceName); 
