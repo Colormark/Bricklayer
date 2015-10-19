@@ -32,9 +32,10 @@ bl-view-scrollable   | 否 |  是否使用滚动视图，“false”为不使用
 从服务端下载sence并应用
 ```javascript
 $.BLLoadSenceFromRemote (url,senceName,senceTitle,callback); 
+```
 
-##2）.章节（BLSectionView）
-  场景相当于网页中的一部分
+##2）.片段（BLSectionView）
+  片段相当于网页中的一部分
 ###初始化
   节点名为“section” 或节点class含“bl-section”会被自动初始化为 BLSectionView  
     
@@ -51,7 +52,7 @@ bl-view-title | 是 | 标题 | 无
 bl-view-defalutload  | 否 |  是否默认载入，“true”为显示 | 默认显示第一个sence        	bl-view-showtabbar   | 否 |  是否显示tabbar（参考tabbar章节），“false”为不显示|默认显示     bl-view-fullscreen   | 否 |  是否全屏显示，“false”为不全屏 | 默认全屏
 bl-view-scrollable   | 否 |  是否使用滚动视图，“false”为不使用 | 默认使用
 
-##4）.BLTabbarView
+##3）.BLTabbarView
 ###初始化
   节点名为“tabbar” 或节点class含“bl-tabbar”会被自动初始化为 BLTabbarView  
 
@@ -91,10 +92,12 @@ bl-tabbaritem-range-array  | 是 |  那些场景激活bl-tabbar-range-class，�
 显示BLTabbarView  
 ```javascript
 $.BLTabbarView.show ("effect name"); 
+```
 
 隐藏BLTabbarView  
 ```javascript
 $.BLTabbarView.hide ("effect name"); 
+```
 
 #二、视图及控件（BLView)
 ------
