@@ -7,7 +7,7 @@
 ##1）.场景（BLSenceView）
   场景相当于独立的网页<br>
   
-### * 初始化
+* 初始化
   节点名为“sence” 或节点class含“bl-sence”会被自动初始化为 BLSenceView  
     
   例如：  
@@ -20,7 +20,7 @@
 <div class="bl-sence" bl-view-name="home" bl-view-title="My home page"></div>  
 ```
   
-### * 属性
+* 属性
     属性名    | 是否必须    | 描述     |默认
 ------------- | ------------- | ------------- | -------------
 bl-view-name | 是 | 唯一识别名 | 无
@@ -28,19 +28,19 @@ bl-view-title | 是 | 标题 | 无
 bl-view-defalutload  | 否 |  是否默认载入，“true”为显示 | 默认显示第一个sence        	bl-view-showtabbar   | 否 |  是否显示tabbar（参考tabbar章节），“false”为不显示|默认显示     bl-view-fullscreen   | 否 |  是否全屏显示，“false”为不全屏 | 默认全屏
 bl-view-scrollable   | 否 |  是否使用滚动视图，“false”为不使用 | 默认使用
 
-### * 方法
-从服务端下载sence并应用  
+* 方法
+	* 从服务端下载sence并应用  
 ```javascript
 $.BLLoadSenceFromRemote (url,senceName,senceTitle,callback); 
 ```
-显示一个sence  
+	* 显示一个sence  
 ```javascript
 $.BLShowSence (senceName); 
 ```
 
 ##2）.碎片（BLSectionView）
   碎片相当于网页中的一部分，必须置于场景（BLSenceView）之中
-### * 初始化
+* 初始化
   节点名为“section” 或节点class含“bl-section”会被自动初始化为 BLSectionView  
     
   例如：  
@@ -48,7 +48,7 @@ $.BLShowSence (senceName);
 <section bl-view-name="my_profile" bl-view-title="My profile"></section>
 ```
 
-### * 属性
+* 属性
     属性名    | 是否必须    | 描述     |默认
 ------------- | ------------- | ------------- | -------------
 bl-view-name | 是 | 唯一识别名 | 无
@@ -56,18 +56,18 @@ bl-view-title | 是 | 标题 | 无
 bl-view-defalutload  | 否 |  是否默认载入，“true”为显示 | 默认显示第一个sence        	bl-view-showtabbar   | 否 |  是否显示tabbar（参考tabbar章节），“false”为不显示|默认显示     bl-view-fullscreen   | 否 |  是否全屏显示，“false”为不全屏 | 默认全屏
 bl-view-scrollable   | 否 |  是否使用滚动视图，“false”为不使用 | 默认使用
 
-### * 方法
-从服务端下载section并应用  
+* 方法
+	* 从服务端下载section并应用  
 ```javascript
 $.BLLoadSenceFromRemote (url,sectionName,sectionTitle,callback); 
 ```
-显示一个section  
+	* 显示一个section  
 ```javascript
 $.BLShowSection (sectionName); 
 ```
 
 ##3）.标签栏BLTabbarView
-### * 初始化
+* 初始化
   节点名为“tabbar” 或节点class含“bl-tabbar”会被自动初始化为 BLTabbarView  
 
   例如：  
@@ -80,7 +80,7 @@ $.BLShowSection (sectionName);
 <div class="bl-tabbar" bl-view-name="tabbar"></div>  
 ```
 
-### * 属性
+* 属性
     属性名    | 是否必须    | 描述     |默认
 ------------- | ------------- | ------------- | -------------
 bl-view-name | 是 | 唯一识别名 | 无
@@ -91,30 +91,30 @@ bl-tabbar-selected-img-tinycolor  | 否 |  激活的item的图片着色 | 无
 bl-tabbar-range--img-tinycolor   | 否 | 显示相关场景时图片着色 | 无
 bl-tabbar-outrange--img-tinycolor   | 否 |  非激活item的图片着色 | 无
 
-### * 子节点
-####	* BLTabitemView
+* 子节点 BLTabitemView
+	* 初始化
   BLTabbarView的项节点，框架会自动根据子项的数量均分宽度  
   注意：第一版只支持一个TabbarView
   
-#####		* 属性
+	* 属性
     属性名    | 是否必须    | 描述     |默认
 ------------- | ------------- | ------------- | -------------
 bl-tabbaritem-selected-array  | 是 |  那些场景激活bl-tabbar-selected-class，多个用“\|”隔开 |无 
 bl-tabbaritem-range-array  | 是 |  那些场景激活bl-tabbar-range-class，多个用“\|”隔开 |无 
 
-### * 方法
-显示BLTabbarView  
+* 方法
+	* 显示BLTabbarView  
 ```javascript
 $.BLTabbarView.show ("effect name"); 
 ```
 
-隐藏BLTabbarView  
+	* 隐藏BLTabbarView  
 ```javascript
 $.BLTabbarView.hide ("effect name"); 
 ```
 
 ##4）.导航条BLNavgationView
-### * 初始化
+* 初始化
   节点名为“nav” 或节点class含“bl-nav”会被自动初始化为 BLNavgationView  
   sence切换时自动应用堆栈。  
   例如：  
@@ -127,19 +127,19 @@ $.BLTabbarView.hide ("effect name");
 <div class="bl-nav" bl-view-name="nav name"></div>  
 ```
 
-### * 属性
+* 属性
     属性名    | 是否必须    | 描述     |默认
 ------------- | ------------- | ------------- | -------------
 bl-view-name | 否 | 唯一识别名 | 无
 
-### * 子节点
+	* 子节点
 注意：目前只支持三个子项，且必须有三个，可以内容为空。  
 第一个和第三个会被固定宽度，而第二个自适应宽度。
 
-###	*  navitem
+		* navitem
   navitem为nav子项，内容需自定义  
 
-###	*  back 后退
+		* back 后退
   back继承自navitem  
   节点名为“back” 或节点class含“bl-back”会被自动初始化后退按钮  
   当无后退堆栈内容,将回到主界面
@@ -149,7 +149,7 @@ bl-view-name | 否 | 唯一识别名 | 无
 <back> \< back </back>  
 ```
 
-###	*  home 回到主界面（第一次被加载的页面）
+		* home 回到主界面（第一次被加载的页面）
   homr继承自navitem  
   节点名为“home” 或节点class含“bl-home”会被自动初始化home按钮  
 
@@ -158,7 +158,7 @@ bl-view-name | 否 | 唯一识别名 | 无
 <home> home </home> 
 ```
 
-###	*  navtitle 标题
+		* navtitle 标题
   navtitle继承自navitem  
   节点名为“navtitle” 或节点class含“bl-navtitle”会被自动初始化标题栏  
   navtitle除了应用title的样式，并无其他特殊
