@@ -2,6 +2,7 @@
 
 
 #一、布局View （LayoutView）
+用于布局嵌套
 ------
 ##1）.场景（BLSenceView）
   场景相当于独立的网页<br>
@@ -27,6 +28,11 @@ bl-view-title | 是 | 标题 | 无
 bl-view-defalutload  | 否 |  是否默认载入，“true”为显示 | 默认显示第一个sence        	bl-view-showtabbar   | 否 |  是否显示tabbar（参考tabbar章节），“false”为不显示|默认显示     bl-view-fullscreen   | 否 |  是否全屏显示，“false”为不全屏 | 默认全屏
 bl-view-scrollable   | 否 |  是否使用滚动视图，“false”为不使用 | 默认使用
 
+###方法
+从服务端下载sence并应用
+```javascript
+$.BLLoadSenceFromRemote (url,senceName,senceTitle,callback); 
+
 ##2）.章节（BLSectionView）
   场景相当于网页中的一部分
 ###初始化
@@ -45,10 +51,50 @@ bl-view-title | 是 | 标题 | 无
 bl-view-defalutload  | 否 |  是否默认载入，“true”为显示 | 默认显示第一个sence        	bl-view-showtabbar   | 否 |  是否显示tabbar（参考tabbar章节），“false”为不显示|默认显示     bl-view-fullscreen   | 否 |  是否全屏显示，“false”为不全屏 | 默认全屏
 bl-view-scrollable   | 否 |  是否使用滚动视图，“false”为不使用 | 默认使用
 
-##3）.从服务端下载sence并应用
-```javascript
-$.BLLoadSenceFromRemote (url,senceName,senceTitle,callback);  
+##4）.BLTabbarView
+###初始化
+  节点名为“tabbar” 或节点class含“bl-tabbar”会被自动初始化为 BLTabbarView  
+
+  例如：  
+```html
+<tabbar bl-view-name="tabbar"></tabbar>  
 ```
+或例如：<br>
+
+```html
+<div class="bl-tabbar" bl-view-name="tabbar"></div>  
+```
+
+###属性
+    属性名    | 是否必须    | 描述     |默认
+------------- | ------------- | ------------- | -------------
+bl-view-name | 是 | 唯一识别名 | 无
+bl-tabbar-selected-class  | 否 |  激活的item的class | 无
+bl-tabbar-range-class   | 否 | 显示相关场景时显示的class | 无
+bl-tabbar-outrange-class   | 否 |  非激活item的class | 无
+bl-tabbar-selected-img-tinycolor  | 否 |  激活的item的图片着色 | 无
+bl-tabbar-range--img-tinycolor   | 否 | 显示相关场景时图片着色 | 无
+bl-tabbar-outrange--img-tinycolor   | 否 |  非激活item的图片着色 | 无
+
+###子节点
+#### BLTabitemView
+  BLTabbarView的项节点，框架会自动根据子项的数量均分宽度  
+  注意：第一版只支持一个TabbarView
+  
+####属性
+    属性名    | 是否必须    | 描述     |默认
+------------- | ------------- | ------------- | -------------
+bl-tabbaritem-selected-array  | 是 |  那些场景激活bl-tabbar-selected-class，多个用“\|”隔开 | 
+bl-tabbaritem-range-array  | 是 |  那些场景激活bl-tabbar-range-class，多个用“\|”隔开 | 
+
+###方法
+显示BLTabbarView  
+```javascript
+$.BLTabbarView.show ("effect name"); 
+
+隐藏BLTabbarView  
+```javascript
+$.BLTabbarView.hide ("effect name"); 
 
 #二、视图及控件（BLView)
 ------
