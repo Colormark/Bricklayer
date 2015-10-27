@@ -384,7 +384,27 @@ bl-view-name | 否 | 唯一识别名 | 无
 #4.数据与接口API
 ##4.1.参数传递
 ##4.2.服务端配置
+
+###4.2.1
+
+datasourceMetaName配置，其名称在客户端的BLConfig对象中配置
+
+名称  | 描述
+------------- | -------------
+  data_object_name                | 数据对象名 ，default "data"
+  loop_array_name        | 循环数组名  ，BLTableView only
+  loop_array_primary_key_field_name    | 循环数组主键名（每个数据必须唯一），LTableView only
+  
+
 ##4.3.客户端配置
+
+在BLConfig对象中配置  
+
+名称  | 描述
+------------- | -------------
+  apiUrl                | 接口地址
+  datasourceName        | 接口名
+  datasourceMetaName    | 数据返回中，数据结构描述的key名
 
 
 #5.动画Animations
