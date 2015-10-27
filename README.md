@@ -25,7 +25,9 @@ Bricklayer
 ------------- | ------------- | ------------- | -------------
 bl-view-name | 是 | 唯一识别名 | 无
 bl-view-title | 是 | 标题 | 无
-bl-view-defalutload  | 否 |  是否默认载入，“true”为显示 | 默认显示第一个sence        	bl-view-showtabbar   | 否 |  是否显示tabbar（参考tabbar章节），“false”为不显示|默认显示     bl-view-fullscreen   | 否 |  是否全屏显示，“false”为不全屏 | 默认全屏
+bl-view-defalutload（弃用）  | 否 |  是否默认载入，“true”为显示 | 默认显示第一个sence
+bl-sence-home  | 否 |  设置一个场景为首页 | 默认为第一个sence
+bl-view-showtabbar   | 否 |  是否显示tabbar（参考tabbar章节），“false”为不显示|默认显示     bl-view-fullscreen   | 否 |  是否全屏显示，“false”为不全屏 | 默认全屏
 bl-view-scrollable   | 否 |  是否使用滚动视图，“false”为不使用 | 默认使用
 
 ###1.1.3.方法
