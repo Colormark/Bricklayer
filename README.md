@@ -277,7 +277,7 @@ bl-view-name | 否 | 唯一识别名 | 无
 
   例如：  
 ```html
-<back> \< back </back>  
+<back> < back </back>  
 ```
 
 3. **home 回到主界面（第一次被加载的页面）**
@@ -346,13 +346,23 @@ bl-view-name | 否 | 唯一识别名 | 无
 
 ###属性
 *bl-form-datasource
-*bl-form-submit-success					           :Call faAlert"{'title':'','desc':''}"<br>
-*bl-form-submit-success-func   			       :Call function<br>
-*bl-form-field                             :field name for submit<br>
-*bl-form-field-validate 				           :form字段验证，支持：email、phone、password、password-repeat<br>
-*bl-form-field-validate-regexp 			       :正则验证<br>
+
+*bl-form-submit-success
+
+```html
+<form .. bl-form-submit-success="{'title':'','desc':''}" ..>
+```
+
+*bl-form-field                             :field name for submit(input select ...)
+*bl-form-textfield                         :field name for submit(div span ...)
+
+*bl-form-field-validate <br>				           
+form字段验证，支持：email、phone、password、password-repeat<br>
+
+*bl-form-field-validate-regexp 		   :正则验证<br>
 *bl-form-submit                            :submit button<br>
-*bl-form-delegate<br>
+*bl-form-delegate
+
 
 ###代理方法Delegate method
 方法  | 描述
