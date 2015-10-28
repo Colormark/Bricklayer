@@ -476,3 +476,28 @@ datasourceMetaName配置，其名称在客户端的BLConfig对象中配置
 *bl-show-sence                  		:Show target sence when cellview taped.<br>
 *bl-show-section                		:Show target section when cellview taped.<br>
 
+
+配置  
+```javascript
+var BLConfig={
+		"developmentMode":true,
+		"showPrototypeCellView":false,
+		"apiUrl":"api.php",
+		"apiName":"apiname",
+		"datasourceMetaName":"fields_desc",
+
+		"imgX":function(src,width){
+			src=src+"?&w="+width;
+			return src;
+		},
+		
+		"pagination":{
+			"currentPageName":"page",
+			"pageLengthName":"page_name",
+			"pageLengthDefault":10,
+			"startPageDefault":1
+		}
+	};
+
+```
+
