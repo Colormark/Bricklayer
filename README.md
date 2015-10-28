@@ -358,8 +358,8 @@ bl-view-name | 否 | 唯一识别名 | 无
 方法  | 描述
 ------------- | -------------
   config               | 配置
-  setQueryPrams        | 在API请求前，设置请求参数
-  afterSubmit          | 请求完成，获取返回数据
+  validateBeforeSubmit        | （formView,submitBtn）。在API请求前，校验form参数，注意如需停止提交请返回false
+  afterSubmit          | （reponseData,formView）。请求完成，获取返回数据
 
 ##3.11.FilterView
 *bl-filterview<br>
