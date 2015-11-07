@@ -151,12 +151,12 @@ bl-tableview-autorefreshdata | 否 | 自动刷新数据，值为秒 | 否（0）
 Method  | Sumary | Parameter 
 ------------- | -------------
   config               | 配置  | 无
-  setQueryPrams        | 在API请求前，设置请求参数 | 
+  setQueryPrams        | 在API请求前，设置请求参数 |  暂不可用
   farmatDataFields     | 在获取到数据后，格式化数据 | Item Data数据, DOM子项(jQuery DOM)
-  cellOnTap            | 当点击一个cellview |
-  cellOnHold           | 当长按一个cellview |
-  cellOnSwipeLeft      | 当向左划一个cellview |
-  cellOnSwipeRight     | 当向右划一个cellview | 
+  cellOnTap            | 当点击一个cellview | DOM子项(jQuery DOM)
+  cellOnHold           | 当长按一个cellview | DOM子项(jQuery DOM)DOM子项(jQuery DOM)DOM子项(jQuery DOM)
+  cellOnSwipeLeft      | 当向左划一个cellview | DOM子项(jQuery DOM)DOM子项(jQuery DOM)
+  cellOnSwipeRight     | 当向右划一个cellview |  DOM子项(jQuery DOM)
 
 
 ###3.1.4.列表子项BLTableCellView
@@ -390,8 +390,10 @@ form字段验证，支持：email、phone、password、password-repeat<br>
 方法  | 描述
 ------------- | -------------
   config               | 配置
-  validateBeforeSubmit        | （formView,submitBtn）。在API请求前，校验form参数，注意如需停止提交请返回false
+   setQueryPrams        | 在API请求前，设置请求参数 |  暂不可用
+  validateBeforeSubmit        | 暂不可用 （formView,submitBtn）。在API请求前，校验form参数，注意如需停止提交请返回false
   afterSubmit          | （reponseData,formView）。请求完成，获取返回数据
+  
 
 ##3.11.FilterView
 *bl-filterview<br>
