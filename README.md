@@ -5,27 +5,21 @@
 只为移动Web APP开发服务，去除一切多余.
 
 
-### Mobile First
-
-Amaze UI believes in Mobile First. Beginning with mobile phone screens, Amaze UI is extending the adaption to larger screens such as tablet and PC.
-
-
-
 ### 流畅的体验
 
 页面切换无需等到，立点立达.  
 简单实现动画效果.
 
 
-
-### 基于iOS的架构思路
-
-更适合移动开发.
-
-
 ### 开发迅速
 
 模仿iOS，支持原型，前后端完全分类，UI、前端分离.
+
+
+### 健壮的开发模型
+
+基于iOS的架构思路，更适合移动开发.
+
 
 
 #2.Specifications  
