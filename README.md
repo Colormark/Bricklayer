@@ -56,7 +56,7 @@ loop_array_primary_key_field_name    | 循环数组主键名（每个数据必�
 
 ## Site config  
 
-设置Javascript对象BLConfig用于配置  
+在任意js文件中配置Javascript BLConfig对象.
 
 名称  | 描述
 ------------- | -------------
@@ -68,8 +68,8 @@ pagination            | 默认分页配置
 parseAJAXErrorCode    | 函数类型. 传入ajax error code，用于同一处理
 imgX                  | 函数类型. 传入图片和图片展示需要的宽度，在此处理新地址的拼接
 
-
-e.g.  
+-----------------------------
+e.g.
 ```javascript
 var BLConfig={
 		"developmentMode":true,
