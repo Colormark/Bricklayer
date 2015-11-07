@@ -126,20 +126,60 @@ Classname:"bl-scrollview" or Nodename:"scrollview"<br>
 ###2.4.3.方法
 
 #3.视图控件BLView
-##3.1.列表BLTableView
-###3.1.1.初始化
+
+##3.1.BLTableView
+###3.1.1.Summary
 
 列表型数据视图，主节点。节点名为“bltableview” 或节点class含“bl-tableview”会被自动初始化为 BLTableView
 
- 1. bl-tablecellview
-Item in tableview, Auto create from datasource. 
- 2. bl-tablecellview-prototype       	
+
+###3.1.2.Protocols & Propertys
+
+Attribute Name    | Necessary | Sumary  | Default
+------------- | ------------- | ------------- | -------------
+bl-tableview-datasource | 否 |协议。数据来源，Api name | 无
+bl-tableview-delegate   | 否 |协议。代理，tableview 和 tablecellview 的事件管理 | 无
+bl-tableview-localstore | 否 |是否缓存数据到本地数据库 |false
+bl-tableview-pagelength | 否 |每页显示数量  | 10
+bl-tableview-startpage  | 否 |起始页页码 | 1
+bl-tableview-autorefreshdata | 否 | 自动刷新数据，值为秒 | 否（0）
+***new***     bl-tableview-groupby    | 否 | 按参数值分组    | 无
+***new***     bl-tableview-showloadmore    | 否 | 布尔，是否显示loadmore    | true
+
+###3.1.3.Delegate
+
+Method  | Sumary | Parameter 
+------------- | -------------
+  config               | 配置  | 无
+  setQueryPrams        | 在API请求前，设置请求参数 | 
+  farmatDataFields     | 在获取到数据后，格式化数据 | Item Data数据, DOM子项(jQuery DOM)
+  cellOnTap            | 当点击一个cellview |
+  cellOnHold           | 当长按一个cellview |
+  cellOnSwipeLeft      | 当向左划一个cellview |
+  cellOnSwipeRight     | 当向右划一个cellview | 
+
+
+###3.1.4.列表子项BLTableCellView
+####3.1.4.1.初始化
+####3.1.4.2.属性
+####3.1.4.3.方法
+
+###3.1.5. 加载更多bl-tableview-loadmore  
+####3.1.5.1.初始化
+
+列表型数据视图，主节点。节点名为“bltableview” 或节点class含“bl-tableview”会被自动初始化为 BLTableView
+Parent node "bl-tableview" 
+
+###3.1.6. BLTablecellview
+###3.1.6.1. Summary  
+ Item in tableview, Auto create from datasource. 
+ __bl-tablecellview-prototype__       	
 Prototype of tablecellview.
   
-  ==>Attributes:<br>
+==>Attributes:<br>
   **bl-identifier** . You can set >1 prototypes with deffrent identifier and select prototype in delegate.
 
-Prototype 如何工作?
+###3.1.6.2.Prototype 如何工作?
 
 **Before render**
 >bl-tableview
@@ -153,51 +193,20 @@ Prototype 如何工作?
 >>bl-tableview-loop
 >>>bl-tableview-cellview
 >>bl-tableview-loadmore(auto create)
-  
- 3. bl-tableview-loadmore
-Auto create by tableview.
 
 
 
-###3.1.2.属性
-
-属性名    | 是否必须    | 描述     |默认
-------------- | ------------- | ------------- | -------------
-bl-tableview-datasource | 否 |Api name | 无
-bl-tableview-delegate   | 否 |tableview 和 tablecellview 的事件管理 | 无
-bl-tableview-localstore | 否 |是否缓存数据到本地数据库 |false
-bl-tableview-pagelength | 否 |每页显示数量  | 10
-bl-tableview-startpage  | 否 |起始页页码 | 1
-bl-tableview-autorefreshdata | 否 | 自动刷新数据，值为秒 | 否（0）
-***new***     bl-tableview-groupby    | 否 | 按参数值分组    | 无
-
-
-###3.1.3.代理方法
-
-方法  | 描述
-------------- | -------------
-  config               | 配置
-  setQueryPrams        | 在API请求前，设置请求参数
-  farmatDataFields     | 在获取到数据后，格式化数据
-  cellOnTap            | 当点击一个cellview
-  cellOnHold           | 当长按一个cellview
-  cellOnSwipeLeft      | 当向左划一个cellview
-  cellOnSwipeRight     | 当向右划一个cellview
-
-
-
-##3.2.列表项BLTableCellView
-###3.2.1.初始化
-###3.2.2.属性
-###3.2.3.方法
 ##3.3.网格BLGridView
 ###3.3.1.初始化
 ###3.3.2.属性
 ###3.3.3.方法
-##3.4.网格项BLGridCellView
-###3.4.1.初始化
-###3.4.2.属性
-###3.4.3.方法
+###3.3.4.[子项]网格项BLGridCellView
+###3.3.4.1.初始化
+###3.3.4.2.属性
+###3.3.4.3.方法
+
+
+
 ##3.5.标签栏BLTabbarView
 ###3.5.1.初始化
 
