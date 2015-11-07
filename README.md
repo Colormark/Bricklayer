@@ -146,7 +146,7 @@ bl-tableview-autorefreshdata | 否 | 自动刷新数据，值为秒 | 否（0）
 ***new***     bl-tableview-groupby    | 否 | 按参数值分组    | 无
 ***new***     bl-tableview-showloadmore    | 否 | 布尔，是否显示loadmore    | true
 
-###3.1.3.Delegate
+###3.1.3.Delegate  
 
 Method  | Sumary | Parameter 
 ------------- | -------------
