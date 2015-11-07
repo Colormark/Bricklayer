@@ -5,19 +5,19 @@
 只为Mobile Web APP开发服务，移除一切多余.
 
 
-### 流畅的体验
+### Streamlined user experience
 
 Native APP 级的操作体验， 场景切换无需等待，立点立达.  
 完美支持内容进场动画效果和场景过渡效果.
 
 
-### 开发迅速
+### Developed rapidly
 
 前后端开发分离，HTML开发和Javascript开发分离.  
 支持展示原型，可将数据按原型自动格式化.  
 
 
-### 健壮的开发模型
+### Security & Robust 
 
 模仿iOS架构及开发思维，更适合移动开发.  
 代码严谨，定制便捷.  
@@ -36,14 +36,14 @@ Native APP 级的操作体验， 场景切换无需等待，立点立达.
 	
 #Install
 
-##引用
+## Require
 
 * 按bricklayer推荐的的HTML文档结构模型初始化HTML文件. 参考
 * 引用jQuery文件
 * 引用bricklayer.js或bricklayer.min.js
 * 引用bricklayer.css或bricklayer.min.css
 
-##服务端配置
+## Metadata description in respone data 
 
 所有的API返回数据，必须配置datasourceMeta，datasourceMeta name在客户端的BLConfig中配置
 
@@ -54,7 +54,7 @@ loop_array_name                      | 循环数组名  ，BLTableView only
 loop_array_primary_key_field_name    | 循环数组主键名（每个数据必须唯一），LTableView only
   
 
-##前端配置
+## Site config  
 
 设置Javascript对象BLConfig用于配置  
 
@@ -69,7 +69,7 @@ parseAJAXErrorCode    | 函数类型. 传入ajax error code，用于同一处理
 imgX                  | 函数类型. 传入图片和图片展示需要的宽度，在此处理新地址的拼接
 
 
-例如
+e.g.  
 ```javascript
 var BLConfig={
 		"developmentMode":true,
