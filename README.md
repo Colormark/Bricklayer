@@ -26,15 +26,16 @@ Native APP 级的操作体验， 场景切换无需等待，立点立达.
 
 #Specifications  
 
-* [BLView](https://github.com/Colormark/Bricklayer/blob/master/BLView.md "Document")BL基础类 
-* [BLLayout](https://github.com/Colormark/Bricklayer/blob/master/BLLayout.md "Document")布局  
-* [BLGadget](https://github.com/Colormark/Bricklayer/blob/master/BLGadget.md "Document")Web组件
-* [BLModel](https://github.com/Colormark/Bricklayer/blob/master/BLModel.md "Document")模态  
-* [BLMedia](https://github.com/Colormark/Bricklayer/blob/master/BLMedia.md "Document")媒体  
-* [BLData](https://github.com/Colormark/Bricklayer/blob/master/BLData.md "Document")数据  
-* [BLAnimation](https://github.com/Colormark/Bricklayer/blob/master/BLAnimation.md "Document")动画    
+* [BLView 基础类](https://github.com/Colormark/Bricklayer/blob/master/BLView.md "Document") 
+* [BLLayout 布局](https://github.com/Colormark/Bricklayer/blob/master/BLLayout.md "Document")  
+* [BLGadget 组件](https://github.com/Colormark/Bricklayer/blob/master/BLGadget.md "Document")
+* [BLModel 模态](https://github.com/Colormark/Bricklayer/blob/master/BLModel.md "Document")  
+* [BLMedia 媒体](https://github.com/Colormark/Bricklayer/blob/master/BLMedia.md "Document")  
+* [BLData 数据](https://github.com/Colormark/Bricklayer/blob/master/BLData.md "Document")  
+* [BLAnimation 动画](https://github.com/Colormark/Bricklayer/blob/master/BLAnimation.md "Document")  
 	
 #Install
+
 ##引用
 
 * 按bricklayer推荐的的HTML文档结构模型初始化HTML文件. 参考
