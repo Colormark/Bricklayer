@@ -1,45 +1,48 @@
-#1.The Product
+#The Product
 
 ### Mobile Only
 
-只为移动Web APP开发服务，去除一切多余.
+只为Mobile Web APP开发服务，移除一切多余.
 
 
 ### 流畅的体验
 
-页面切换无需等到，立点立达.  
-简单实现动画效果.
+Native APP 级的操作体验， 场景切换无需等待，立点立达.  
+完美支持内容进场动画效果和场景过渡效果.
 
 
 ### 开发迅速
 
-模仿iOS，支持原型，前后端完全分类，UI、前端分离.
+前后端开发分离，HTML开发和Javascript开发分离.  
+支持展示原型，可将数据按原型自动格式化.  
 
 
 ### 健壮的开发模型
 
-基于iOS的架构思路，更适合移动开发.
+模仿iOS架构及开发思维，更适合移动开发.  
+代码严谨，定制便捷.  
 
 
 
-#2.Specifications  
+#Specifications  
 
-* [BLView](https://github.com/Colormark/Bricklayer/blob/master/BLView.md "Document") 
-* [BLLayout](https://github.com/Colormark/Bricklayer/blob/master/BLLayout.md "Document")  
-* [BLGadget](https://github.com/Colormark/Bricklayer/blob/master/BLGadget.md "Document")
-* [BLModel](https://github.com/Colormark/Bricklayer/blob/master/BLModel.md "Document")  
-* [BLData](https://github.com/Colormark/Bricklayer/blob/master/BLData.md "Document")  
-* [BLAnimation](https://github.com/Colormark/Bricklayer/blob/master/BLAnimation.md "Document")    
+* [BLView](https://github.com/Colormark/Bricklayer/blob/master/BLView.md "Document")BL基础类 
+* [BLLayout](https://github.com/Colormark/Bricklayer/blob/master/BLLayout.md "Document")布局  
+* [BLGadget](https://github.com/Colormark/Bricklayer/blob/master/BLGadget.md "Document")Web组件
+* [BLModel](https://github.com/Colormark/Bricklayer/blob/master/BLModel.md "Document")模态  
+* [BLMedia](https://github.com/Colormark/Bricklayer/blob/master/BLMedia.md "Document")媒体  
+* [BLData](https://github.com/Colormark/Bricklayer/blob/master/BLData.md "Document")数据  
+* [BLAnimation](https://github.com/Colormark/Bricklayer/blob/master/BLAnimation.md "Document")动画    
 	
-#3.Install
-##3.1引用
+#Install
+##引用
 
 * 按bricklayer推荐的的HTML文档结构模型初始化HTML文件. 参考
 * 引用jQuery文件
 * 引用bricklayer.js或bricklayer.min.js
 * 引用bricklayer.css或bricklayer.min.css
 
-##3.1服务端配置
+##服务端配置
 
 所有的API返回数据，必须配置datasourceMeta，datasourceMeta name在客户端的BLConfig中配置
 
@@ -50,7 +53,7 @@ loop_array_name                      | 循环数组名  ，BLTableView only
 loop_array_primary_key_field_name    | 循环数组主键名（每个数据必须唯一），LTableView only
   
 
-##3.2.前端配置
+##前端配置
 
 设置Javascript对象BLConfig用于配置  
 
