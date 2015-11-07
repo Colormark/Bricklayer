@@ -1,7 +1,7 @@
 Bricklayer
 ===================
 
-#Featrues
+#1.Featrues
 
 	*浏览速度快，页面切换无需等到   
 	*自动将服务端的数据展现在前端   
@@ -12,7 +12,7 @@ Bricklayer
 	*自动根据图片在设备上显示的尺寸请求图片  
 
 
-#Table of contents  
+#2.Table of contents  
 
 ###[BLView](https://github.com/Colormark/Bricklayer/blob/master/BLView.md "Document") 
 ###[BLLayout](https://github.com/Colormark/Bricklayer/blob/master/BLLayout.md "Document")  
@@ -21,21 +21,8 @@ Bricklayer
 ###[BLData](https://github.com/Colormark/Bricklayer/blob/master/BLData.md "Document")  
 ###[BLAnimation](https://github.com/Colormark/Bricklayer/blob/master/BLAnimation.md "Document")    
 	
-#Install
-
-#Plan
-
-
-
-
-
-
-
-#4.数据与接口API
-##4.1.参数传递
-##4.2.服务端配置
-
-###4.2.1
+#3.Install
+##3.1服务端配置
 
 datasourceMetaName配置，其名称在客户端的BLConfig对象中配置
 
@@ -46,7 +33,7 @@ datasourceMetaName配置，其名称在客户端的BLConfig对象中配置
   loop_array_primary_key_field_name    | 循环数组主键名（每个数据必须唯一），LTableView only
   
 
-##4.3.客户端配置
+##3.2.客户端配置
 
 在BLConfig对象中配置  
 
@@ -57,19 +44,6 @@ datasourceMetaName配置，其名称在客户端的BLConfig对象中配置
   datasourceMetaName    | 数据返回中，数据结构描述的key名
 
 
-
-#临时
-
-*bl-view-radius 						:True or false<br>
-*bl-view-circle 						:px or percent<br>
-*bl-view-shadow 						:"small|normal|big color" <br>
-*bl-view-3dshadow 					:"color"<br><br>
-
-*bl-show-sence                  		:Show target sence when cellview taped.<br>
-*bl-show-section                		:Show target section when cellview taped.<br>
-
-
-#配置  
 ```javascript
 var BLConfig={
 		"developmentMode":true,
