@@ -169,6 +169,7 @@ bl-tableview-localstore | 否 |是否缓存数据到本地数据库 |false
 bl-tableview-pagelength | 否 |每页显示数量  | 10
 bl-tableview-startpage  | 否 |起始页页码 | 1
 bl-tableview-autorefreshdata | 否 | 自动刷新数据，值为秒 | 否（0）
+<span style="color:red">new</span>bl-tableview-groupby    | 否 | 按参数值分组    | 无
 
 
 ###3.1.3.代理方法
