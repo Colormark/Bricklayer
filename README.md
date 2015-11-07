@@ -149,7 +149,7 @@ bl-tableview-autorefreshdata | 否 | 自动刷新数据，值为秒 | 否（0）
 ###3.1.3.Delegate  
 
 Method  | Sumary | Parameter 
-------------- | -------------
+------------- | ------------- | -------------
   config               | 配置  | 无
   setQueryPrams        | 在API请求前，设置请求参数 |  暂不可用
   farmatDataFields     | 在获取到数据后，格式化数据 | Item Data数据, DOM子项(jQuery DOM)
