@@ -33,7 +33,7 @@ Native APP 级的操作体验， 场景切换无需等待，立点立达.
    1. <h4>[Layout 布局](https://github.com/Colormark/Bricklayer/wiki/BLLayout)</h4>
       1. BLSenceView 场景  
       1. BLSectionView 碎片  
-      1. BLFlexView 伸缩布局  
+      1. [BLFlexView - 伸缩布局](https://github.com/Colormark/Bricklayer/wiki/BLFlexView)  
       1. BLScrollView 滚动  
    1. <h4>[Widgets Web组件](https://github.com/Colormark/Bricklayer/wiki/BLGadget)</h4>
       1. BLTableView 列表/表格  
