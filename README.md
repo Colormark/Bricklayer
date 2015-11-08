@@ -31,38 +31,38 @@ Native APP 级的操作体验， 场景切换无需等待，立点立达.
       1. 命名规则  
       1. 样式增强  
    1. [Layout 布局](https://github.com/Colormark/Bricklayer/wiki/BLLayout)  
-      1.2.1. BLSenceView 场景  
-      1.2.2. BLSectionView 碎片  
-      1.2.3. BLFlexView 伸缩布局  
-      1.2.4. BLScrollView 滚动  
-   1.3. [Widgets Web组件](https://github.com/Colormark/Bricklayer/wiki/BLGadget)  
-      1.3.1. BLTableView 列表/表格  
-      1.3.2. BLGridView 网格  
-      1.3.3. BLDetailView 详情页  
-      1.3.4. BLFormView 表单  
-      1.3.5. BLSearchView 搜索  
-      1.3.6. BLTabbarView 选项卡  
-      1.3.7. BLNavgationView 导航  
-   1.4. [Model 模态窗口](https://github.com/Colormark/Bricklayer/wiki/BLModel)  
-      1.4.1. BLAlertView  
-      1.4.2. BLPrometView  
-      1.4.3. BLConfirmView  
-      1.4.4. BLHueView  
-   1.5. [Media 媒体](https://github.com/Colormark/Bricklayer/wiki/BLMedia)  
-      1.5.1. BLImageView  
-      1.5.2. BLVideoView  
-   1.6. [BLData 数据](https://github.com/Colormark/Bricklayer/wiki/BLData)  
-      1.6.1. 客户端及服务端配置  
-      1.6.2. 参数传递  
-   1.6.3. 本地数据存储  
-   1.7. [BLAnimation 动画](https://github.com/Colormark/Bricklayer/wiki/BLAnimation)  
-      1.7.1. 场景过渡动画  
-      1.7.2. DOM进场动画  
-      1.7.3. 支持的动画附录  
-2. Plugins  
-   2.1. 自适应图像  
-   2.2. 手势识别  
-   2.2. Canvas精灵  
+      1. BLSenceView 场景  
+      1. BLSectionView 碎片  
+      1. BLFlexView 伸缩布局  
+      1. BLScrollView 滚动  
+   1. [Widgets Web组件](https://github.com/Colormark/Bricklayer/wiki/BLGadget)  
+      1. BLTableView 列表/表格  
+      1. BLGridView 网格  
+      1. BLDetailView 详情页  
+      1. BLFormView 表单  
+      1. BLSearchView 搜索  
+      1. BLTabbarView 选项卡  
+      1. BLNavgationView 导航  
+   1. [Model 模态窗口](https://github.com/Colormark/Bricklayer/wiki/BLModel)  
+      1. BLAlertView  
+      1. BLPrometView  
+      1. BLConfirmView  
+      1. BLHueView  
+   1. [Media 媒体](https://github.com/Colormark/Bricklayer/wiki/BLMedia)  
+      1. BLImageView  
+      1. BLVideoView  
+   1. [BLData 数据](https://github.com/Colormark/Bricklayer/wiki/BLData)  
+      1. 客户端及服务端配置  
+      1. 参数传递  
+      1. 本地数据存储  
+   1. [BLAnimation 动画](https://github.com/Colormark/Bricklayer/wiki/BLAnimation)  
+      1. 场景过渡动画  
+      1. DOM进场动画  
+      1. 支持的动画附录  
+1. Plugins  
+   1. 自适应图像  
+   1. 手势识别  
+   1. Canvas精灵  
 	 
 #Install
 
