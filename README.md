@@ -26,16 +26,16 @@ Native APP 级的操作体验， 场景切换无需等待，立点立达.
 
 #Specifications  
 
-1. Components - 组件  
-   1. [BLView 视图](https://github.com/Colormark/Bricklayer/wiki/BLView)  
+1. <h3>Components</h3>  
+   1. <h4>[BLView 视图](https://github.com/Colormark/Bricklayer/wiki/BLView)</h4>  
       1. 命名规则  
       1. 样式增强  
-   1. [Layout 布局](https://github.com/Colormark/Bricklayer/wiki/BLLayout)  
+   1. <h4>[Layout 布局](https://github.com/Colormark/Bricklayer/wiki/BLLayout)</h4>  
       1. BLSenceView 场景  
       1. BLSectionView 碎片  
       1. BLFlexView 伸缩布局  
       1. BLScrollView 滚动  
-   1. [Widgets Web组件](https://github.com/Colormark/Bricklayer/wiki/BLGadget)  
+   1. <h4>[Widgets Web组件](https://github.com/Colormark/Bricklayer/wiki/BLGadget)</h4>  
       1. BLTableView 列表/表格  
       1. BLGridView 网格  
       1. BLDetailView 详情页  
@@ -43,19 +43,19 @@ Native APP 级的操作体验， 场景切换无需等待，立点立达.
       1. BLSearchView 搜索  
       1. BLTabbarView 选项卡  
       1. BLNavgationView 导航  
-   1. [Model 模态窗口](https://github.com/Colormark/Bricklayer/wiki/BLModel)  
+   1. <h4>[Model 模态窗口](https://github.com/Colormark/Bricklayer/wiki/BLModel)</h4>  
       1. BLAlertView  
       1. BLPrometView  
       1. BLConfirmView  
       1. BLHueView  
-   1. [Media 媒体](https://github.com/Colormark/Bricklayer/wiki/BLMedia)  
+   1. <h4>[Media 媒体](https://github.com/Colormark/Bricklayer/wiki/BLMedia)</h4>  
       1. BLImageView  
       1. BLVideoView  
-   1. [BLData 数据](https://github.com/Colormark/Bricklayer/wiki/BLData)  
+   1. <h4>[BLData 数据](https://github.com/Colormark/Bricklayer/wiki/BLData)</h4>  
       1. 客户端及服务端配置  
       1. 参数传递  
       1. 本地数据存储  
-   1. [BLAnimation 动画](https://github.com/Colormark/Bricklayer/wiki/BLAnimation)  
+   1. <h4>[BLAnimation 动画](https://github.com/Colormark/Bricklayer/wiki/BLAnimation)</h4>  
       1. 场景过渡动画  
       1. DOM进场动画  
       1. 支持的动画附录  
