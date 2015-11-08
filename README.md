@@ -35,7 +35,7 @@ Native APP 级的操作体验， 场景切换无需等待，立点立达.
       1. BLSectionView 碎片  
       1. BLFlexView 伸缩布局  
       1. BLScrollView 滚动  
-   1. <h4>[Widgets Web组件](https://github.com/Colormark/Bricklayer/wiki/BLGadget)</h4>  
+   1. <h4>[Widgets Web组件](https://github.com/Colormark/Bricklayer/wiki/BLGadget)</h4>
       1. BLTableView 列表/表格  
       1. BLGridView 网格  
       1. BLDetailView 详情页  
@@ -63,7 +63,9 @@ Native APP 级的操作体验， 场景切换无需等待，立点立达.
    1. <h4>自适应图像</h4>
    1. <h4>手势识别</h4>
    1. <h4>Canvas精灵</h4>
-	 
+
+==========================
+
 #Install
 
 ## Require
