@@ -27,10 +27,10 @@ Native APP 级的操作体验， 场景切换无需等待，立点立达.
 #Specifications  
 
 1. Components - 组件  
-   1.1. [BLView 视图](https://github.com/Colormark/Bricklayer/wiki/BLView)  
-      1.1.1. 命名规则  
-      1.1.2. 样式增强  
-   1.2. [Layout 布局](https://github.com/Colormark/Bricklayer/wiki/BLLayout)  
+   1. [BLView 视图](https://github.com/Colormark/Bricklayer/wiki/BLView)  
+      1. 命名规则  
+      1. 样式增强  
+   1. [Layout 布局](https://github.com/Colormark/Bricklayer/wiki/BLLayout)  
       1.2.1. BLSenceView 场景  
       1.2.2. BLSectionView 碎片  
       1.2.3. BLFlexView 伸缩布局  
