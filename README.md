@@ -22,7 +22,17 @@ Native APP 级的操作体验， 场景切换无需等待，立点立达.
 模仿iOS架构及开发思维，更适合移动开发.  
 代码严谨，定制便捷.  
 
+#开发状态及更新 V 0.1.2
+1. <h3>修复</h3>
+      1.重写了参数传递机制 
+      1.增加了list item应对不同点击状况
+      1.修补了3D动画在一些设备上页面初始化时产生的bug
+      1.健壮了form表单的支持
 
+1. <h3>后续目标</h3>
+      1.Sence的滚动条状态支持 
+      1.支持Section Url
+      1.完善起始页
 
 #Specifications  
 
@@ -37,6 +47,8 @@ Native APP 级的操作体验， 场景切换无需等待，立点立达.
       1. BLScrollView 滚动  
    1. <h4>[Widgets Web组件](https://github.com/Colormark/Bricklayer/wiki/BLGadget)</h4>
       1. BLTableView 列表/表格  
+      1. BLStackView 卡片 - Arranges views linearly 继承自TableView [new]
+      1. BLWaterFlowView  瀑布式 [new]
       1. BLGridView 网格  
       1. BLDetailView 详情页  
       1. BLFormView 表单  
