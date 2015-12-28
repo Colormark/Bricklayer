@@ -3,18 +3,18 @@
 ### Mobile Only
 
 只为Mobile Web APP开发服务，移除一切多余.
-
+支持iOS、安卓的绝大部分常规机型
 
 ### Streamlined user experience
 
-Native APP 级的操作体验， 场景切换无需等待，立点立达.  
+Native APP 级的操作体验， 场景切换无需等待，立点立达.  (using pushState + xhr)  
 完美支持内容进场动画效果和场景过渡效果.
-
+每个页面都有一个URL地址，可以被直接打开和分享.
 
 ### Developed rapidly
 
 前后端开发分离，HTML开发和Javascript开发分离.  
-支持展示原型，可将数据按原型自动格式化.  
+支持“原型”的开发方式，可将数据按原型自动格式化.  
 
 
 ### Security & Robust 
@@ -47,8 +47,8 @@ Native APP 级的操作体验， 场景切换无需等待，立点立达.
       1. BLScrollView 滚动  
    1. <h4>[Widgets Web组件](https://github.com/Colormark/Bricklayer/wiki/BLGadget)</h4>
       1. BLTableView 列表/表格  
-      1. BLStackView 卡片 - Arranges views linearly 继承自TableView [new]
-      1. BLWaterFlowView  瀑布式 [new]
+      1. <del>BLStackView</del> BLCardView 卡片 - Arranges views linearly 继承自TableView [new]
+      1. BLWaterFlowView  瀑布式 [new] 别名（CollectionView）
       1. BLGridView 网格  
       1. BLDetailView 详情页  
       1. BLFormView 表单  
@@ -146,6 +146,56 @@ var BLConfig={
 	};
 
 ```
+
+#Get Start
+
+### 创建一个Sence
+e.g.
+```html
+<sence bl-view-name="demo" bl-view-title="Stack View Demo">
+
+</sence>
+
+```
+
+### 创建一个table View
+e.g.
+```html
+<sence bl-view-name="demo" bl-view-title="Stack View Demo">
+	<tableView bl-tableview-datasource="article.list">    //接口名
+		<div class="bl-tableview-loop">		      //循环容器
+	        	<!-- Prototype cell -->
+	        	<div class="bl-tableview-cellview-prototype bl-view-radius-sm"    //创建一个原型
+	                        bl-tableview-cellview-cellIdentifier ="@default"	  //设置ID
+	        		bl-show-sence="article.detail"                            //点击cell展开的VC
+	        		bl-animate-delayinterval="150"                            //动画，依次出现的时间间隔
+	        		bl-animate-effect-swing="flipInY|flipInX">                //依次从左和右边出现动画
+	        		<div bl-field = "article_title"></div>                    //自动将接口返回的数据中得article_title格式化并展示在这个
+	        	</div>
+	        	<!-- Prototype end -->
+	        </div>
+	</tableView>
+</sence>
+```
+
+### 设置DataDelegate
+
+添加DataDelegate
+```html
+<tableView bl-tableview-datasource="article.list" bl-tableview-delegate="article.list"> 
+
+```
+
+实现DataDelegate
+```javascript
+$.BLTableviewDelegate("article.list","farmatDataFields",function(data){
+	data["article_title"]=data["article_title"]+"...";
+	return data;
+});
+
+```
+
+
 
 #Bug feedback & Requests
 
