@@ -38,3 +38,5 @@
 			"startPageDefault":1
 		}
 	};
+
+	var BLAPISets ={};
