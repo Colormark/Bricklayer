@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+  <head>
+      <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+      <!--<link rel="shortcut icon" type="image/icon" href="/assets/icons/favicon.ico" />-->
+  
+      <meta charset="UTF-8">
+      <title>嗨!Bricklayer</title>
+
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+      <meta name="format-detection" content="telephone=no">
+
+      <meta http-equiv="Cache-Control" content="no-siteapp" />
+      
+      <meta name="apple-mobile-web-app-title" content="嗨!Bricklayer">
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-status-bar-style" content="black" />     
+      
+      <!--required css -->
+      <link rel="stylesheet" href="bricklayer.css"/>
+      
+      <!--extra css -->
+
+      <!-- custom for this site -->
+      <link rel="stylesheet" href="demo.ui.css"/>
+
+      <!--required js -->
+      <script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+      <script src="bricklayer.js"></script>
+      
+      <!-- custom for this site -->
+      <script src="assets/scripts/bricklayer_delegate_demo.js"></script>
+      <script src="assets/scripts/bricklayer_app_demo.js"></script>
+
+  </head>
+<body class="loading">
+	
+	<!-- welcome loading -->
+	<splash class="cover-bg" style="background-image:url(1.jpg);">
+		<div class="am-text-center am-text-lg" style="color:#FFF;width:100%;position:fixed;bottom:50%">
+			 <img src="assets/images/ball-triangle.svg">
+		</div>
+	</splash>
+	
+	<!-- tabbar -->
+	<tabbar class="am-g">
+        <tabitem class="am-u-sm-3" bl-show-sence="discovery">
+            <svg><use xlink:href="assets/images/view.svg#home"/></svg>
+            <tabbartext>发现</tabbartext>
+        </tabitem>
+        <!--<tabitem class="am-u-sm-3" bl-show-sence="group">
+            <svg><use xlink:href="assets/images/view.svg#wechat"/></svg>
+            <tabbartext>群</tabbartext>
+        </tabitem>-->
+        <tabitem class="am-u-sm-3" bl-show-sence="forum">
+            <svg><use xlink:href="assets/images/view.svg#wechat"/></svg>
+            <tabbartext>社区</tabbartext>
+        </tabitem>
+        <tabitem class="am-u-sm-3" bl-show-sence="myhome">
+            <svg><use xlink:href="assets/images/view.svg#activity"/></svg>
+            <tabbartext>我的</tabbartext>
+        </tabitem>
+        <tabitem class="am-u-sm-3" bl-show-sence="more">
+        	<span class="new_messages_num am-badge am-badge-danger am-round" 
+          style="position:absolute;right:10px;top:10px;display:none">0</span>
+            <svg><use xlink:href="assets/images/view.svg#my"/></svg>
+            <tabbartext>更多</tabbartext>
+        </tabitem>
+
+    </tabbar>
+    
+    <!-- 
+ ****************************************** 发现 *********************************************
+-->
+    <!-- 列表页 -->
+    <sence bl-view-name="discovery" bl-view-title="发现">
+    	<nav class="am-g ui-bg-color-main" bl-animate-effect="slideInDown">
+            <back class="am-u-sm-3 text-center sub-head"><i class="am-icon-chevron-left">&nbsp;</i> 后退</back>
+            <navtitle class="am-u-sm-6 text-center sub-head" data-field="title"><b bl-field="category_name"> </b></navtitle>
+            <navbtnitem class="am-u-sm-3">&nbsp;</navbtnitem>
+        </nav>
+        <navgap></navgap>
+        <div class="bl-tableview" 
+                   bl-tableview-datasource="discovery.list" 
+                   bl-tableview-groupby="category_id">
+			     <div class="bl-tableview-loop">
+            	<!-- Prototype cell -->
+              <div class="bl-tableview-cellview-prototype list-card bl-view-radius-sm"
+                        bl-tableview-cellview-cellIdentifier="@normal"
+              		 		  bl-show-sence="article.detail" 
+              		 	    bl-animate-delayinterval="150" 
+              		 	    bl-animate-effect="flipInY"
+                        bl-query-prams="{'article_id':BLCurrentDataId}" 
+                        >
+                    <div class="am-g am-g-collapse am-padding-sm">
+                    	<div class="am-u-sm-5 am-text-left am-text-xl">
+                    		<div class="item-icon2"
+								bl-field-style="[{'style_name':'background-image','style_field':'head_img'}]">
+                    		</div>
+                    	</div>
+                        <div class="am-u-sm-7 am-text-left">
+                        	<div class="am-text-lg" bl-field="article_title"></div>
+                        	<div class="am-text-sm bl-gray" bl-field="sub_title"></div>
+                        </div>
+                    </div>
+              </div>
+        		  <!-- Prototype cell -->
+            </div>
+        </div>
+    </sence>
+
+
+    <!-- 详细 -->
+    <sence class="bl-detailview" bl-view-name="discovery.detail" bl-detailview-datasource="article.detail" bl-detailview-delegate="article.detail" bl-view-showtabbar="false"  bl-view-title="详细">
+    	  <nav class="head am-g ui-bg-color-main" bl-animate-effect="slideInDown">
+            <back class="am-u-sm-3 text-center sub-head"><i class="am-icon-chevron-left">&nbsp;</i> 后退</back>
+            <navtitle class="am-u-sm-6 text-center sub-head"  data-field="name">文章详细</navtitle>
+            <navbtnitem class="am-u-sm-3">&nbsp;</navbtnitem>
+        </nav>
+        <navgap></navgap>
+        
+        <detail data-field="content">
+        	<blimageview  
+				    bl-field-attr="[{'attr_name':'src','attr_field':'head_img'}]" 
+        		style="width:100%; height:auto"></blimageview>
+        	<div  class="am-padding">
+	        	<h1 class="am-text-center am-text-xl am-margin-top" bl-field="article_title"></h1>
+	        	<h2 class="am-text-center am-text-lg am-margin-top-sm am-margin-bottom-sm" bl-field="sub_title"></h2>
+	        	<hr />
+	        	<div class="am-padding-top textcontent" bl-field="head_content" bl-field-htmldecode="true" bl-auto-enable-blimgview="true"></div>
+        	</div>
+        </detail>
+
+    </sence>
+    
+   </body>
+</html> 
+    
+    
